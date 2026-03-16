@@ -20,9 +20,12 @@ checksum = "366ffbaa4442f4684d91e2cd7c5ea7c4ed8add41959a31447066e279e432b618"
 
 [[package]]
 name = "accesskit"
-version = "0.21.1"
+version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cf203f9d3bd8f29f98833d1fbef628df18f759248a547e7e01cfbf63cda36a99"
+checksum = "5351dcebb14b579ccab05f288596b2ae097005be7ee50a7c3d4ca9d0d5a66f6a"
+dependencies = [
+ "uuid",
+]
 
 [[package]]
 name = "adler2"
@@ -516,9 +519,9 @@ dependencies = [
 [[package]]
 name = "ecolor"
 version = "0.33.3"
-source = "git+https://github.com/emilk/egui?rev=9bc062c#9bc062c8eee17f154743a35145983f0e6f02b1c3"
+source = "git+https://github.com/emilk/egui?rev=f32727d#f32727ddca01a033a7af072ac1a5d504b9178c05"
 dependencies = [
- "emath 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "emath 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
 ]
 
 [[package]]
@@ -576,13 +579,13 @@ dependencies = [
 [[package]]
 name = "egui"
 version = "0.33.3"
-source = "git+https://github.com/emilk/egui?rev=9bc062c#9bc062c8eee17f154743a35145983f0e6f02b1c3"
+source = "git+https://github.com/emilk/egui?rev=f32727d#f32727ddca01a033a7af072ac1a5d504b9178c05"
 dependencies = [
  "accesskit",
  "ahash",
  "bitflags 2.11.0",
- "emath 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
- "epaint 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "emath 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
+ "epaint 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
  "log",
  "nohash-hasher",
  "profiling",
@@ -637,7 +640,7 @@ version = "0.22.0"
 dependencies = [
  "document-features",
  "eframe",
- "egui 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "egui 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
  "egui_commonmark_backend",
  "egui_commonmark_macros",
  "egui_extras",
@@ -650,7 +653,7 @@ name = "egui_commonmark_backend"
 version = "0.22.0"
 dependencies = [
  "data-url",
- "egui 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "egui 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
  "egui_extras",
  "pulldown-cmark",
  "syntect",
@@ -661,7 +664,7 @@ name = "egui_commonmark_macros"
 version = "0.22.0"
 dependencies = [
  "document-features",
- "egui 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "egui 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
  "egui_commonmark_backend",
  "proc-macro-crate",
  "proc-macro2",
@@ -674,10 +677,10 @@ dependencies = [
 [[package]]
 name = "egui_extras"
 version = "0.33.3"
-source = "git+https://github.com/emilk/egui?rev=9bc062c#9bc062c8eee17f154743a35145983f0e6f02b1c3"
+source = "git+https://github.com/emilk/egui?rev=f32727d#f32727ddca01a033a7af072ac1a5d504b9178c05"
 dependencies = [
  "ahash",
- "egui 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "egui 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
  "ehttp",
  "enum-map",
  "image",
@@ -730,7 +733,7 @@ dependencies = [
 [[package]]
 name = "emath"
 version = "0.33.3"
-source = "git+https://github.com/emilk/egui?rev=9bc062c#9bc062c8eee17f154743a35145983f0e6f02b1c3"
+source = "git+https://github.com/emilk/egui?rev=f32727d#f32727ddca01a033a7af072ac1a5d504b9178c05"
 
 [[package]]
 name = "enum-map"
@@ -773,11 +776,11 @@ dependencies = [
 [[package]]
 name = "epaint"
 version = "0.33.3"
-source = "git+https://github.com/emilk/egui?rev=9bc062c#9bc062c8eee17f154743a35145983f0e6f02b1c3"
+source = "git+https://github.com/emilk/egui?rev=f32727d#f32727ddca01a033a7af072ac1a5d504b9178c05"
 dependencies = [
  "ahash",
- "ecolor 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
- "emath 0.33.3 (git+https://github.com/emilk/egui?rev=9bc062c)",
+ "ecolor 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
+ "emath 0.33.3 (git+https://github.com/emilk/egui?rev=f32727d)",
  "font-types",
  "log",
  "nohash-hasher",
@@ -2992,6 +2995,12 @@ name = "utf8_iter"
 version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be"
+
+[[package]]
+name = "uuid"
+version = "1.22.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a68d3c8f01c0cfa54a75291d83601161799e4a89a39e0929f4b0354d88757a37"
 
 [[package]]
 name = "vello_common"
