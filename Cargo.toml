@@ -16,8 +16,8 @@ version = "0.22.0"
 repository = "https://github.com/lampsitter/egui_commonmark"
 
 [workspace.dependencies]
-egui_extras = {git="https://github.com/emilk/egui", rev="f32727d", default-features=false }
-egui = {git="https://github.com/emilk/egui", rev="f32727d", default-features=false}
+egui_extras = {git="https://github.com/emilk/egui", rev="cd3c38cf", default-features=false }
+egui = {git="https://github.com/emilk/egui", rev="cd3c38cf", default-features=false}
 
 
 egui_commonmark_backend = { version = "0.22.0", path = "egui_commonmark_backend", default-features = false }
